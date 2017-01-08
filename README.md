@@ -1,7 +1,7 @@
 # BYColorPicker-Swift
 Plug and play color picker for iOS
 
-<img src="/BYColorPickerView-screenshot-iPhone7-Simulator.png?raw=true" width="320">
+<img src="/BYColorPickerView-Swift-screenshot-iPhone7-Simulator.png?raw=true" width="320">
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
