@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BYColorPickerViewController" customModule="BYColorPickerSwiftExample" customModuleProvider="target">
+            <connections>
+                <outlet property="colorSwatch" destination="sbK-uq-Vpb" id="f4Z-Tx-sJS"/>
+                <outlet property="colorWheel" destination="IRb-Qr-F1e" id="Eqf-zY-C4M"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQR-mm-uV8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-vY-vFW">
+                            <rect key="frame" x="16" y="0.0" width="61" height="44"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                            <state key="normal" title="CANCEL"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchDown" id="U4f-oH-GwG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrH-Rd-hXg">
+                            <rect key="frame" x="315" y="0.0" width="44" height="44"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                            <state key="normal" title="DONE"/>
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="-1" eventType="touchDown" id="upV-H9-zR8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="fe2-vY-vFW" firstAttribute="height" secondItem="sQR-mm-uV8" secondAttribute="height" id="54e-NB-TVZ"/>
+                        <constraint firstItem="KrH-Rd-hXg" firstAttribute="height" secondItem="sQR-mm-uV8" secondAttribute="height" id="F8d-Fd-2fR"/>
+                        <constraint firstAttribute="height" constant="44" id="Qk3-Z5-mvP"/>
+                        <constraint firstItem="fe2-vY-vFW" firstAttribute="centerY" secondItem="sQR-mm-uV8" secondAttribute="centerY" id="VcY-X4-FwB"/>
+                        <constraint firstItem="KrH-Rd-hXg" firstAttribute="centerY" secondItem="sQR-mm-uV8" secondAttribute="centerY" id="iiQ-QD-raI"/>
+                        <constraint firstItem="fe2-vY-vFW" firstAttribute="leading" secondItem="sQR-mm-uV8" secondAttribute="leading" constant="16" id="rca-cW-4BK"/>
+                        <constraint firstAttribute="trailing" secondItem="KrH-Rd-hXg" secondAttribute="trailing" constant="16" id="x6H-j3-JuF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gQ-9s-iWS">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-Qr-F1e" customClass="BYColorWheel" customModule="BYColorPickerSwiftExample" customModuleProvider="target">
+                            <rect key="frame" x="37.5" y="136.5" width="300" height="300"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbK-uq-Vpb" customClass="BYColorSwatch" customModule="BYColorPickerSwiftExample" customModuleProvider="target">
+                                    <rect key="frame" x="105" y="105" width="90" height="90"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="sbK-uq-Vpb" secondAttribute="height" multiplier="1:1" id="6ga-YV-YFS"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="IRb-Qr-F1e" secondAttribute="height" multiplier="1:1" id="Htm-T8-C9w"/>
+                                <constraint firstItem="sbK-uq-Vpb" firstAttribute="centerY" secondItem="IRb-Qr-F1e" secondAttribute="centerY" id="Jzd-z9-Jmk"/>
+                                <constraint firstItem="sbK-uq-Vpb" firstAttribute="centerX" secondItem="IRb-Qr-F1e" secondAttribute="centerX" id="TMK-lI-P9Z"/>
+                                <constraint firstItem="sbK-uq-Vpb" firstAttribute="width" secondItem="IRb-Qr-F1e" secondAttribute="width" multiplier="0.3:1" id="b9I-jK-ObI"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="98L-9U-KhX"/>
+                            </connections>
+                        </view>
+                        <slider opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DeJ-tI-3xj" customClass="BYGradientSlider" customModule="BYColorPickerSwiftExample" customModuleProvider="target">
+                            <rect key="frame" x="54" y="461.5" width="266.5" height="31"/>
+                            <connections>
+                                <action selector="saturationValueDidChange:" destination="-1" eventType="valueChanged" id="TIH-JW-xth"/>
+                            </connections>
+                        </slider>
+                        <slider opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-hK-DSY" customClass="BYGradientSlider" customModule="BYColorPickerSwiftExample" customModuleProvider="target">
+                            <rect key="frame" x="54" y="516.5" width="266.5" height="31"/>
+                            <connections>
+                                <action selector="brightnessValueDidChange:" destination="-1" eventType="valueChanged" id="g3r-mb-fOM"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="DeJ-tI-3xj" firstAttribute="width" secondItem="6gQ-9s-iWS" secondAttribute="width" multiplier="0.7:1" id="8ws-O7-hbu"/>
+                        <constraint firstItem="g7m-hK-DSY" firstAttribute="top" secondItem="DeJ-tI-3xj" secondAttribute="bottom" constant="25" id="Fan-Yc-Pq4"/>
+                        <constraint firstItem="DeJ-tI-3xj" firstAttribute="centerX" secondItem="6gQ-9s-iWS" secondAttribute="centerX" id="NJ6-vd-D0j"/>
+                        <constraint firstItem="g7m-hK-DSY" firstAttribute="centerX" secondItem="6gQ-9s-iWS" secondAttribute="centerX" id="Zvb-Xd-2Ax"/>
+                        <constraint firstItem="g7m-hK-DSY" firstAttribute="width" secondItem="DeJ-tI-3xj" secondAttribute="width" id="aak-F3-g5w"/>
+                        <constraint firstItem="IRb-Qr-F1e" firstAttribute="centerY" secondItem="6gQ-9s-iWS" secondAttribute="centerY" constant="-25" id="oim-xQ-znm"/>
+                        <constraint firstItem="IRb-Qr-F1e" firstAttribute="width" secondItem="6gQ-9s-iWS" secondAttribute="width" multiplier="0.8:1" id="sIO-ij-JGd"/>
+                        <constraint firstItem="IRb-Qr-F1e" firstAttribute="centerX" secondItem="6gQ-9s-iWS" secondAttribute="centerX" id="tlA-l8-dJn"/>
+                        <constraint firstItem="DeJ-tI-3xj" firstAttribute="top" secondItem="IRb-Qr-F1e" secondAttribute="bottom" constant="25" id="yTN-4w-73x"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sQR-mm-uV8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="78N-9K-l9T"/>
+                <constraint firstItem="6gQ-9s-iWS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="C8V-P7-oD6"/>
+                <constraint firstItem="sQR-mm-uV8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CKb-NG-RBY"/>
+                <constraint firstItem="6gQ-9s-iWS" firstAttribute="top" secondItem="sQR-mm-uV8" secondAttribute="bottom" id="GDU-xY-mnD"/>
+                <constraint firstAttribute="bottom" secondItem="6gQ-9s-iWS" secondAttribute="bottom" id="K4h-bX-40e"/>
+                <constraint firstItem="6gQ-9s-iWS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bIa-by-bWo"/>
+                <constraint firstItem="sQR-mm-uV8" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="eCQ-UG-KN7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>
